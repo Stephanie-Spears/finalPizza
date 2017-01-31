@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Fredericka+the+Great|Averia+Serif+Libre" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/pizza.ico">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza-Pizza</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>Pizza Time!</h1>
+      </div>
+      <button type="button" name="button" class="btn btn-xl" id="readyToOrderButton">Ready to Order?</button>
+      <div class="section" id="showForm">
+        <div class="row"><!-- NOTE: row1 div -->
+          <div class="col-xs-6"><!-- NOTE: col1 div -->
+            <div class="list-group-item">
+              <h2 class="well">Build your Pizza!</h2>
+              <form id="pizzaDetailsForm">
+                <div class="form-group" id="radioInput"><!-- NOTE: radio input -->
+                  <h3>Choose a Size</h3>
+                  <input type="radio" name="pizzaSize" value="Small" checked> Small<br>
+                  <input type="radio" name="pizzaSize" value="Medium"> Medium<br>
+                  <input type="radio" name="pizzaSize" value="Large"> Large
+                </div>
+                <div class="form-group" id="checkBoxesInput"><!-- NOTE: check-boxes -->
+                  <h3>Choose toppings</h3>
+                  <label>
+                    <input value=" Cheese" type="checkbox" checked>Cheese
+                  </label>
+                  <label>
+                    <input value=" Pepperoni" type="checkbox">Pepperoni
+                  </label>
+                  <label>
+                    <input value=" Sausage" type="checkbox">Sausage
+                  </label>
+                  <label>
+                    <input value=" Olives" type="checkbox">Olives
+                  </label>
+                  <label>
+                    <input value=" Cat" type="checkbox">Cat
+                  </label>
+                  <label>
+                    <input value=" Mushrooms" type="checkbox">Mushrooms
+                  </label>
+                  <label>
+                    <input value=" Peppers" type="checkbox">Peppers
+                  </label>
+                  <label>
+                    <input value=" Vegetarian" type="checkbox">Vegetarian
+                  </label>
+                  <label>
+                    <input value=" MeatLovers" type="checkbox">Meatlovers
+                  </label>
+                  <label>
+                    <input value=" Dog" type="checkbox">Dog
+                  </label>
+                </div><!-- NOTE: end form-group div *checkboxes -->
+                <div class="btn-group-vertical">
+                  <button class="btn btn-lg btn-primary" type="click" id="orderPizzaButton">Add Pizza</button>
+                  <button class="btn btn-lg btn-warning" type="submit" id="checkoutButton">Continue to Checkout</button>
+                </div><!-- NOTE: end btn-group div -->
+              </form><!-- NOTE: end pizzaDetailsForm div -->
+            </div><!-- NOTE: end list-group-item div -->
+          </div><!-- NOTE: end col1 div -->
+
+          <div class="col-xs-6" id="customerOrder"><!-- NOTE: col2 div -->
+            <div class="list-group-item">
+              <h2 class="well">Your Order</h2>
+              <ul class="pizzaList">
+              </ul>
+            </div>
+            <div class="list-group-item">
+              <header class="panel panel-info">Your Total</header>
+              <div class="list-group-item" id="showTotal">
+              </div>
+            </div>
+          </div><!-- NOTE: end col2 div -->
+        </div><!-- NOTE: end row div -->
+      </div><!-- NOTE: end section div -->
+
+      <div class="section">
+        <div class="row">
+          <div class="col-xs-12">
+            <form id="customerDetailsForm">
+              <h2>Delivery Details</h2>
+              <div class="form-group">
+                <input class="form-control" id="customerName" type="text" placeholder="Name" required>
+                <label for="customerName"></label>
+              </div>
+              <div class="form-group">
+                <label for="customerAddress"></label>
+                <input class="form-control" id="customerAddress" type="text" placeholder="Address" required>
+              </div>
+              <div class="form-group">
+                <label for="customerEmail"></label>
+                <input class="form-control" id="customerEmail" type="text" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="customerCoupon"></label>
+                <input class="form-control" id="customerCoupon" type="text" placeholder="enter coupon code">
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-lg btn-primary" type="submit">Confirm Order</button>
+                <button class="btn btn-lg btn-danger" id="clearFormButton" type="reset" name="button">Reset Form</button>
+              </div>
+            </form><!-- NOTE: end form div -->
+          </div><!-- NOTE: end col 1 div -->
+        </div><!-- NOTE: end row1 div -->
+      </div><!-- NOTE: end section 1 div -->
+    </div><!-- NOTE: end container div -->
+  </body>
+</html>
